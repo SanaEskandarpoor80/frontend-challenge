@@ -10,6 +10,11 @@
 }
 
 @font-face {
+    font-family: YekanBakhFaNumLight;
+    src: url("../YekanBakhFaNum/Webfonts/fonts/woff2/YekanBakhFaNum-Light.woff2");
+}
+
+@font-face {
     font-family: YekanBakhFaNumBold;
     src: url("../YekanBakhFaNum/Webfonts/fonts/woff2/YekanBakhFaNum-Bold.woff2");
 }
@@ -20,12 +25,150 @@
 }
 
 body {
+    direction: rtl;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
     background: var(--main-color);
     color: var(--light-color);
-    font-family: YekanBakhFaNumRegular;
+    font-family: YekanBakhFaNumLight;
+    margin: 0;
+    padding: 0;
 }
 
 * {
     color: var(--light-color);
+    font-family: YekanBakhFaNumLight;
+}
+
+p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 2;
+}
+
+.warpper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+}
+
+/******************* Start piccture and text style *******************/
+.Pic-text-contianer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 35px;
+}
+
+.text-side {
+    width: 60%;
+    margin-left: 50px;
+}
+
+.text-side h1 {
+    margin: 0;
+    font-family: YekanBakhFaNumExtraBold;
+    font-size: 44px;
+}
+
+.text-side h1 span {
+    font-family: YekanBakhFaNumExtraBold;
+    color: var(--second-color);
+    font-size: 44px;
+}
+
+.text-side span {
+    font-size: 20px;
     font-family: YekanBakhFaNumRegular;
+    color: var(--second-color);
+}
+
+.text-side p {
+    margin: 0;
+    margin-top: 15px;
+}
+
+.pic-side {
+    width: 40%;
+}
+
+.pic-side img {
+    width: 100%;
+}
+
+/******************* Start skill style *******************/
+.skill-section-contianer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.skill-category {
+    margin-bottom: 20px;
+}
+
+.skill-category h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.skill {
+    margin-bottom: 10px;
+}
+
+.skill-name {
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    position: relative;
+    height: 25px;
+    background-color: var(--light-color);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.progress-bar span {
+    position: absolute;
+    height: 100%;
+    background-color: var(--second-color);
+    width: 0;
+    animation: fill-bar 2s ease forwards;
+}
+
+.progress-bar span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: 20px 20px;
+    animation: shimmer 1s linear infinite;
+}
+
+@keyframes fill-bar {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: var(--value, 0%);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -20px 0;
+    }
+
+    100% {
+        background-position: 20px 0;
+    }
 }
