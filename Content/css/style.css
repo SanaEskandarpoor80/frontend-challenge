@@ -378,3 +378,41 @@ p {
     margin-right: 5px;
     fill: var(--light-color);
 }
+
+/******************* Start contact us style *******************/
+.contactUs-contianer {
+    position: fixed;
+    left: 0;
+    top: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--second-color);
+}
+
+.contactUs-contianer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 65px;
+    height: 65px;
+    border: none;
+    background: transparent;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.contactUs-contianer a:hover {
+    background: var(--main-color);
+}
+
+.contactUs-contianer a img {
+    width: 40px;
+}
+
+#email {
+    border: 2px solid;
+    border-left: none;
+    border-right: none;
+}
