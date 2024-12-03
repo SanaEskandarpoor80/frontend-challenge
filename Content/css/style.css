@@ -260,8 +260,9 @@ p {
     left: 0;
     height: 100%;
     width: 100%;
-    background-size: 20px 20px;
-    animation: shimmer 1s linear infinite;
+    background-image: url(../Image/shimmer.png);
+    background-size: 30px 28px;
+    animation: shimmer 3s linear infinite;
 }
 
 @keyframes fill-bar {
@@ -399,7 +400,7 @@ p {
     height: 65px;
     border: none;
     background: transparent;
-    transition: all 0.3s;
+    transition: all 0.5s;
     cursor: pointer;
 }
 
