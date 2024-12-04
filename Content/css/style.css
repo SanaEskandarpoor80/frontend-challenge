@@ -159,6 +159,41 @@ p {
     margin-left: 3px;
 }
 
+.slider-slide {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.slider-prev,
+.slider-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.slider-prev {
+    left: 10px;
+}
+
+.slider-next {
+    right: 10px;
+}
+
+.slider-btn button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
 /******************* Start skill style *******************/
 .skill-section-contianer {
     display: flex;
@@ -416,4 +451,143 @@ p {
     border: 2px solid;
     border-left: none;
     border-right: none;
+}
+
+/******************* Start Mobile contact us style *******************/
+.Mobile-contactUs-contianer {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+}
+
+.Mobile-contactUs-contianer button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--second-color);
+    border: none;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+}
+
+.Mobile-contactUs-contianer button img {
+    width: 30px;
+}
+
+#Mobile-contactUs-modal {
+    position: fixed;
+    left: 7vw;
+    bottom: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: var(--second-color);
+    /* padding: 25px; */
+    border-radius: 15px;
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+}
+#Mobile-contactUs-modal a{
+    text-decoration: none;
+    margin: 10px 0px;
+}
+.active-mobile-contact{
+    padding: 25px;
+    width: auto !important;
+    opacity: 1 !important;
+}
+/******************* Start Responsive style *******************/
+@media screen and (max-width: 992px) {
+    .warpper {
+        width: 100%;
+        margin: 0px 50px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    /* piccture and text style */
+    .Pic-text-contianer {
+        flex-direction: column-reverse;
+    }
+
+    .text-side {
+        margin: 0;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .pic-side {
+        width: 55vw;
+    }
+
+    .text-side h1 {
+        font-size: 34px;
+    }
+
+    .text-side h1 span {
+        font-size: 34px;
+    }
+
+    .text-side span {
+        font-size: 18px;
+    }
+
+    .slider-text-pic {
+        flex-direction: column;
+    }
+
+    .slider-btn {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        height: 40px;
+    }
+
+    .slider-btn button {
+        transform: rotate(90deg);
+    }
+
+    /* Start skill section */
+    .skill-category-contianer {
+        flex-direction: column;
+    }
+
+    .skill-section-contianer h2 {
+        font-size: 26px;
+    }
+
+    .skill-clm {
+        margin-left: 0 !important;
+        width: 100%;
+    }
+
+    .skill-clm .skill-category:nth-child(2) {
+        margin: 50px 0px !important;
+    }
+
+    .skill {
+        width: 42vw;
+    }
+
+    /* tart text with background section */
+    .text-with-background-contianer {
+        background-image: url(../Image/992background.png);
+        background-size: cover;
+    }
+
+    /* contact us */
+    .contactUs-contianer {
+        display: none;
+    }
+
+    .Mobile-contactUs-contianer {
+        display: flex;
+    }
 }
